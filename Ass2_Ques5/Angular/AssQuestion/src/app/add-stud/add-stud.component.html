@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Add New Student</title>
+    </head>
+
+    <body>
+        <form [formGroup]="angForm" (submit)="AddNew()">
+    
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Roll Number</label>
+              <input type="number" class="form-control" formControlName="rno" placeholder="Roll Number">
+            </div>
+      
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Name</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="Student Name">
+            </div>
+      
+          
+          <div class="form-group col-md-4">
+            <label for="inputAddress">Age</label>
+            <input type="text" class="form-control" formControlName="age" placeholder="Age">
+          </div>
+      
+      
+          <div class="form-row">
+      
+            <div class="form-group col-md-4">
+              <label for="inputState">Semester</label>
+              <select formControlName="semester" class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
+            </div>
+      
+            <div class="form-group col-md-4">
+              <label for="inputState">Department</label>
+              <select formControlName="department" class="form-control">
+                <option selected>CE</option>
+                <option>IT</option>
+                <option>Civil</option>
+                <option>Electronics</option>
+              </select>
+            </div>
+      
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Add Student</button>
+        </form>
+    </body>
+</html>

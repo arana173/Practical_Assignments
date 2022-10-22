@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Add New Student</title>
+    </head>
+
+    <body>
+        <form [formGroup]="angForm" (submit)="updateStud()">
+    
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Roll Number</label>
+              <input type="number" class="form-control" formControlName="rno" required
+               #rno [(ngModel)] = "stud.rno" placeholder="Roll Number">
+            </div>
+      
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Name</label>
+              <input type="text" class="form-control" formControlName="name" required #name [(ngModel)]="stud.name" placeholder="Student Name">
+            </div>
+      
+          
+          <div class="form-group col-md-4">
+            <label for="inputAddress">Age</label>
+            <input type="text" class="form-control" formControlName="age" required placeholder="Age" #age [(ngModel)]="stud.age">
+          </div>
+      
+      
+          <div class="form-row">
+      
+            <div class="form-group col-md-4">
+              <label for="inputState">Semester</label>
+              <select formControlName="semester" #semester [(ngModel)]="stud.semester" required class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
+            </div>
+      
+            <div class="form-group col-md-4">
+              <label for="inputState">Department</label>
+              <select formControlName="department" #department [(ngModel)]="stud.department" required class="form-control">
+                <option selected>CE</option>
+                <option>IT</option>
+                <option>Civil</option>
+                <option>Electronics</option>
+              </select>
+            </div>
+      
+          </div>
+          <br>
+          <button type="submit" class="btn btn-warning">Update Student</button>
+        </form>
+    </body>
+</html>

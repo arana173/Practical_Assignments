@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <form  action="/">
+
+        <h5 style="color: red;">Form submitted successfully...</h5>
+        <table class="table table-striped table-bordered" border="2">
+
+            <tr>
+                <th scope="col">Name</th>
+                <td>{{data.name}}</td>
+            </tr>
+
+            <tr>
+                <th scope="col">Email</th>
+                <td>{{data.email}}</td>
+            </tr>
+
+            <tr>
+                <th scope="col">Contact Number</th>
+                <td>{{data.contact}}</td>
+            </tr>
+
+            <tr>
+                <th scope="col">City</th>
+                <td>{{data.city}}</td>
+            </tr>
+
+            <tr>
+                <th scope="col">CV/Resume</th>
+                <td>{{data.file}}</td>
+            </tr>
+        </table>
+        <br>
+        
+        <center><button type="submit" class="btn btn-success">Okay</button></center>
+
+    </form>
+</body>
+
+</html>
