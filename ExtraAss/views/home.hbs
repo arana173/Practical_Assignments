@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Display Vehicles</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <h3><a href="/add" class="link-primary" style="text-decoration: none;">Add New</a></h3>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Vehicle brand</th>
+                <th>Category name</th>
+                <th>Picture</th>
+                <th>Price</th>
+                <th>Depreciation %</th>
+                <th>No of years</th>
+                <th>Total price</th>
+            </tr>
+            </thead>
+
+            {{#each data}}
+            <tr> 
+                <td>{{this.vehicle_brand}}</td>
+                <td>{{this.category_name}}</td>
+                <td><img src="{{this.vehicle_picture}}" width="200"></td>
+                <td>{{this.price}}</td>
+                <td>{{this.depreciation}}</td>
+                <td>{{this.noOfYears}}</td>
+                <td>{{this.totalPrice}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </body>
+</html>
